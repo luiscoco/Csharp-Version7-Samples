@@ -1,7 +1,7 @@
 # C# 7.0 - 7.2 Features - Sample Projects
 
 This solution shows the biggest features introduced across **C# 7.0, 7.1, and 7.2**.  
-Projects: `P88`–`P103`.
+Projects: `P88`-`P103`.
 
 ---
 
