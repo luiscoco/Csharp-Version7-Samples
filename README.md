@@ -73,7 +73,7 @@ class C
 
 ## 🧩 C# 7.1
 
-### 9) Async `Main` (`P92_AsyncMain`)
+### P96_AsyncMain
 - **What’s new**: `static async Task Main()` entry point.
 ```csharp
 static async Task Main()
@@ -83,13 +83,13 @@ static async Task Main()
 }
 ```
 
-### 10) `default` literal (`P93_DefaultLiteral`)
+### P97_DefaultLiteral
 - **What’s new**: Use `default` without a type.
 ```csharp
 DateTime dt = default; // instead of default(DateTime)
 ```
 
-### 11) Tuple element name inference (`P94_TupleNameInference`)
+### P98_TupleNameInference
 - **What’s new**: Names inferred from variable names.
 ```csharp
 var x = 1; var y = 2;
@@ -100,25 +100,25 @@ var p = (x, y); // names inferred: p.x, p.y
 
 ## 🧩 C# 7.2
 
-### 12) `in` parameters (`P95_InParameters`)
+### P99_InParameters
 - **What’s new**: Pass by **readonly** reference.
 ```csharp
 void Print(in BigStruct s) => Console.WriteLine(s.Value);
 ```
 
-### 13) `ref readonly` returns (`P96_ReadonlyRefReturns`)
+### P100_ReadonlyRefReturns
 - **What’s new**: Return by ref but **read-only**.
 ```csharp
 ref readonly int MaxRef(in int a, in int b) => ref (a > b ? ref a : ref b);
 ```
 
-### 14) `ref struct` (stack-only types) (`P97_RefStruct`)
+### P101_RefStruct
 - **What’s new**: Types like `Span<T>`—cannot escape the stack.
 ```csharp
 ref struct Window { public Span<int> Data; public Window(Span<int> s){ Data=s; } }
 ```
 
-### 15) `private protected` (`P98_PrivateProtected`)
+### P102_PrivateProtected
 - **What’s new**: Accessible by derived types **in the same assembly**.
 ```csharp
 class Base { private protected int X; }
