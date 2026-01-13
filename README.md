@@ -124,7 +124,7 @@ ref struct Window { public Span<int> Data; public Window(Span<int> s){ Data=s; }
 class Base { private protected int X; }
 ```
 
-### 16) Non-trailing named arguments (`P99_NonTrailingNamedArgs`)
+### P103_NonTrailingNamedArgs
 - **What’s new**: Named args can appear before positional ones.
 ```csharp
 Log(level: 2, "message", repeat: 3);
