@@ -130,7 +130,7 @@ class Base { private protected int X; }
 Log(level: 2, "message", repeat: 3);
 ```
 
-### 17) `stackalloc` to `Span<T>` (`P100_StackallocToSpan`)
+### P104_StackallocToSpan
 - **What’s new**: Use `stackalloc` directly with spans and in more contexts.
 ```csharp
 Span<int> s = stackalloc int[3] { 1, 2, 3 };
@@ -138,7 +138,7 @@ Span<int> s = stackalloc int[3] { 1, 2, 3 };
 
 ---
 
-## ▶ How to build & run
+## How to build & run
 
 From the repo root:
 ```bash
