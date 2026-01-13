@@ -7,7 +7,7 @@ Projects: `P84`–`P100`.
 
 ## 🧩 C# 7.0
 
-### 1) Out variables & discards (`P84_OutVarAndDiscards`)
+### P88_OutVarAndDiscards
 - **What’s new**: Declare `out var` inline; ignore values with `_`.
 ```csharp
 if (int.TryParse(text, out var n))
@@ -16,48 +16,48 @@ if (int.TryParse(text, out var n))
 _ = int.TryParse(text, out _); // discard result and out value
 ```
 
-### 2) Tuples & deconstruction (`P85_TuplesDeconstruction`)
+### P89_TuplesDeconstruction
 - **What’s new**: Lightweight tuples and deconstructing assignment.
 ```csharp
 (int x, int y) p = (1, 2);
 var (a, b) = p; // a=1, b=2
 ```
 
-### 3) Pattern matching (`P86_PatternMatching`)
+### P90_PatternMatching
 - **What’s new**: `is` patterns and `switch` with `when` guards.
 ```csharp
 object o = 42;
 if (o is int i && i > 0) Console.WriteLine($"+{i}");
 ```
 
-### 4) Local functions (`P87_LocalFunctions`)
+### P91_LocalFunctions
 - **What’s new**: Define helper functions inside a method (supports recursion).
 ```csharp
 int Fib(int n) => n <= 1 ? n : Add(Fib(n-1), Fib(n-2));
 int Add(int a, int b) => a + b; // local
 ```
 
-### 5) Ref returns & ref locals (`P88_RefReturnsAndLocals`)
+### P92_RefReturnsAndLocals
 - **What’s new**: Return and store **references** to variables/elements.
 ```csharp
 ref int Find(ref int a, ref int b) => ref (a > b ? ref a : ref b);
 ref int best = ref Find(ref arr[0], ref arr[1]); best = 99;
 ```
 
-### 6) Throw expressions (`P89_ThrowExpressions`)
+### P93_ThrowExpressions
 - **What’s new**: Use `throw` in expression contexts.
 ```csharp
 string NameOrThrow(string? s) => s ?? throw new ArgumentNullException(nameof(s));
 ```
 
-### 7) Binary literals & digit separators (`P90_BinaryLiteralsDigitSeparators`)
+### P94_BinaryLiteralsDigitSeparators
 - **What’s new**: `0b...` binary and `_` separators.
 ```csharp
 int mask = 0b_1111_0000;
 int large = 1_000_000;
 ```
 
-### 8) More expression-bodied members (`P91_ExpressionBodiedMoreMembers`)
+### P95_ExpressionBodiedMoreMembers
 - **What’s new**: Expression bodies for ctors, finalizers, accessors, indexers.
 ```csharp
 class C
